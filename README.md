@@ -1,82 +1,47 @@
 # Ross Paxton
 
-**ICT professional based in Ayrshire, Scotland.** I build Windows endpoint management tooling, self-hosted internal platforms, and small browser extensions that do one job properly.
+ICT in Ayrshire, Scotland. I mostly build tools for managing Windows machines, plus the occasional self-hosted app when I can't find one that already does the job.
 
----
+## Things you can look at
 
-## What I work on
+### [EaseView](https://github.com/Ropaxyz/EaseView)
 
-- **Windows fleet management** — endpoint diagnostics, remediation, and audit tooling for machines at scale
-- **Self-hosted platforms** — internal tools that replace rented SaaS (service desks, trackers, planners)
-- **Assistive technology** — small utilities that make a screen easier to live with
-- **Browser extensions** — narrow, single-purpose tools with no telemetry
+The one people actually use. It puts a colour tint over your screen to make reading easier. Covers all your monitors and handles them being plugged and unplugged, sits in the system tray, and can turn itself on and off at sunset and sunrise. Python, Windows.
 
----
+### [Octopus Agile Tracker](https://github.com/Ropaxyz/AgileTracker)
 
-## Featured projects
-
-### [EaseView](https://github.com/Ropaxyz/EaseView) — Windows screen tint overlay
-
-A click-through colour overlay that covers every monitor, built for reading comfort. Multi-monitor aware (recovers when displays come and go), DPI-aware, schedulable by fixed times or sunset-to-sunrise, with saved profiles, optional global hotkeys, portable mode, and a state-aware system tray UI.
-
-`Python` · `Windows` · `assistive technology`
-
-### [Octopus Agile Tracker](https://github.com/Ropaxyz/AgileTracker) — live electricity prices on a small display
-
-Live Octopus Agile rates on a Waveshare **ESP32-C6 touch AMOLED**, with a Raspberry Pi + e-ink build as the legacy path. Shows the current rate, the next slot, a 48-slot day chart, and a run/wait score so you know when to switch something on. Flashes "PAID TO USE" when rates go negative.
-
-`C++` · `ESP32` · `Arduino` · `e-ink`
+Live Octopus Agile prices on a Waveshare ESP32-C6 AMOLED. Current rate, the next slot, all 48 half-hour slots for the day, and a rough score for whether it's a decent time to run something. Flashes PAID TO USE when the price goes negative. There's an older Raspberry Pi and e-ink build in the same repo.
 
 ### Browser extensions
 
-| Extension | What it does | Browsers |
-|---|---|---|
-| [Save Image As PNG/JPG](https://github.com/Ropaxyz/Save-Image-As-PNG-JPG---Chrome-Edge) | Right-click any image to save it as PNG or JPG — no online converters. Uses an offscreen document to avoid tainted canvases. | Chrome, Edge |
-| [Firefox Save As](https://github.com/Ropaxyz/Firefox_SaveAs) | The same idea for Firefox: PNG or JPG instead of WebP. | Firefox |
-| [Amazon Bulk Cancel](https://github.com/Ropaxyz/SubscribeSaveBulkCancelChrome) | Cancel many Subscribe & Save items in one pass, with parallel workers, a live progress bar, retries and per-item timeouts. | Chrome, Edge |
-| [Amazon Bulk Cancel for Firefox](https://github.com/Ropaxyz/FireFox-Bulk-Cancel-for-Amazon-Subscribe-Save) | The Firefox build of the same tool. | Firefox |
-| [YouTube Shorts Auto-Next](https://github.com/Ropaxyz/FFyoutube-shorts-auto-next) | Automatically advances to the next Short. | Firefox |
+All of these run in your browser. None of them send anything anywhere.
 
-All of these run entirely in the browser — nothing is sent anywhere.
+[Save Image As PNG/JPG](https://github.com/Ropaxyz/Save-Image-As-PNG-JPG---Chrome-Edge) for Chrome and Edge, and [Firefox Save As](https://github.com/Ropaxyz/Firefox_SaveAs) for Firefox. Right click an image and save it as PNG or JPG rather than WebP.
 
----
+[Amazon Bulk Cancel](https://github.com/Ropaxyz/SubscribeSaveBulkCancelChrome) for Chrome and Edge, and [the Firefox version](https://github.com/Ropaxyz/FireFox-Bulk-Cancel-for-Amazon-Subscribe-Save). Tick a pile of Subscribe & Save items and cancel them in one go instead of one at a time.
 
-## Also on GitHub
+[YouTube Shorts Auto-Next](https://github.com/Ropaxyz/FFyoutube-shorts-auto-next) moves on to the next Short for you.
 
-**[OctoBot](https://github.com/Ropaxyz/OctoBot-Octopus-Energy-Discord-Bot)** *(archived)* — a Python Discord bot that pulled Octopus Energy usage and cost data and charted it with matplotlib, over asyncio and GraphQL.
+### [OctoBot](https://github.com/Ropaxyz/OctoBot-Octopus-Energy-Discord-Bot)
 
----
+Archived. A Discord bot that pulled your Octopus usage and cost data and charted it.
 
-## Private & internal work
+## Private projects
 
-Some of my larger projects are private, because they're internal tools or they carry deployment detail. In short:
+Some of the bigger things aren't public.
 
-- **Aegis** — a Windows endpoint support and remediation console. Capability-aware connection routing (WinRM → CIM → WMI → SMB → SSH), a health dashboard, and one-click fixes that verify their own result and can roll back. Every action lands in an append-only audit trail with secrets redacted.
-- **AyrDesk** — a self-hosted IT service desk: tickets, queues and routing, SLA tracking, asset register, knowledge base, and reporting.
-- **Track Things** — a two-person diary PWA on Next.js and Supabase, where row-level security gates every record and photos are served behind an authenticated route.
-- **LifeOS** — a self-hosted personal command centre (React, Express, Prisma, SQLite, Docker).
-- **SAC_Printers / Printer_April** — printer management and reporting utilities.
+**Aegis** is a Windows endpoint console. Type in a computer name and it works out the best way in, whether that's WinRM, CIM, WMI, SMB, or SSH as a last resort, then runs a health check and offers fixes. Anything it changes gets verified afterwards and can be rolled back. Every action lands in an audit log.
 
----
+**AyrDesk** is an IT service desk. Tickets, queues and routing, SLAs, an asset register, a knowledge base and reporting.
 
-## Tools I reach for
+**Track Things** is a diary for two people to log walks, gigs, meals and days out, with photos, map pins and separate ratings.
 
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![C%2B%2B](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+**LifeOS** is a personal planner for tasks, habits, goals and notes.
+
+## What I use
+
+Python and PowerShell day to day, TypeScript and JavaScript for anything web. C++ when there's an ESP32 involved. React, Next.js, Node, Express and Prisma on the web side, SQLite or Postgres underneath, Docker to run it all.
 
 ---
 
-## Get in touch
-
-I'm open to opportunities — the quickest way to reach me is here on GitHub, or open an issue on any project above.
-
-<sub>Based in Ayrshire, Scotland · ICT at South Ayrshire Council</sub>
+Ayrshire, Scotland. I work in ICT at South Ayrshire Council.
