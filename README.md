@@ -22,6 +22,13 @@ All of these run in your browser. None of them send anything anywhere.
 
 [YouTube Shorts Auto-Next](https://github.com/Ropaxyz/FFyoutube-shorts-auto-next) moves on to the next Short for you.
 
+### [paxton-uptime](https://github.com/Ropaxyz/paxton-uptime)
+
+An outside-in check on my own sites. GitHub Actions hits every public project
+every ten minutes, along with the server's own status probe, its failed units,
+the last nightly backup and the certificate expiry dates, and opens an issue if
+anything breaks. A server that is down cannot tell you that it is down.
+
 ### [OctoBot](https://github.com/Ropaxyz/OctoBot-Octopus-Energy-Discord-Bot)
 
 Archived. A Discord bot that pulled your Octopus usage and cost data and charted it.
